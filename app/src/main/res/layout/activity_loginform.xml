@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,28 +11,33 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
         app:tint="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="600dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ino Arte"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ext_inoart"
+        android:layout_marginTop="30dp"
 
         />
 
+
+    <TextView
+        android:id="@+id/ext_inoart"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="Ino Art"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+
+
+        />
 
     <View
         android:id="@+id/formlogin"
@@ -84,10 +88,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Esqueci senha"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:onClick="true"
         android:layout_marginLeft="240dp"
-        android:layout_marginTop="20dp"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/edit_senha"
         tools:ignore="OnClick" />
@@ -109,16 +112,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/criar"
-        android:textColor="@color/black"
+        android:textColor="@color/purple_200"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_entrar"
         android:layout_marginTop="60dp"
-        android:layout_marginLeft="70dp"
         />
 
     <TextView
-        android:id="@+id/text_tela_cadastro"
+        android:id="@+id/criartextcriar"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="criar conta"
@@ -135,8 +139,8 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_width="315dp"
-        android:layout_height="2dp"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
         android:background="@color/black"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/black"
@@ -149,8 +153,8 @@
 
     <View
         android:id="@+id/divide2"
-        android:layout_width="315dp"
-        android:layout_height="2dp"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
         android:background="@color/black"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/black"
@@ -159,8 +163,7 @@
         tools:layout_editor_absoluteY="230dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_senha"
-        />
+        app:layout_constraintTop_toBottomOf="@id/edit_senha"/>
 
 
 

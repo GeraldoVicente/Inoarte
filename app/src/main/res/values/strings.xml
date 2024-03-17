@@ -1,3 +1,22 @@
 <resources>
+<!--    Strigs para tela de login-->
     <string name="app_name">Inoarte</string>
+    <string name="entrar">Entrar</string>
+    <string name="esqueci">Esquecim</string>
+    <string name="login">Login</string>
+    <string name="preencher">Por favor preencha todos os campos</string>
+    <string name="criar"> Ainda não tens uma conta?  </string>
+    <string name="registar">Criar Conta</string>
+
+
+<!--    String para Tela de cadrasto-->
+
+    <string name="nome">seu nome</string>
+    <string name="email">Email</string>
+    <string name="numero">+258 </string>
+    <string name="senha">Senha</string>
+    <string name="repsenha">Repetir senha</string>
+    <string name="cConta">Criar conta</string>
+    <string name="registarc">Registar</string>
+
 </resources>
