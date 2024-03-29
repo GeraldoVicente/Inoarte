@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="600dp"
         tools:ignore="MissingConstraints"
-        android:contentDescription="TODO" />
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,25 +55,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="180dp"
-        app:layout_constraintTop_toTopOf="@id/edit_email"
+
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Preencha todos os campos"
-        android:textColor="@color/black"
-        android:textStyle="normal"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@id/formlogin"
-        app:layout_constraintStart_toStartOf="@id/formlogin"
-        app:layout_constraintTop_toBottomOf="@id/textcriarconta"
-        />
+
 
     <EditText
         android:id="@+id/nome"
         style="@style/Edit_text"
         android:drawableLeft="@drawable/ic_person"
-        android:hint="Seu nome"
+        android:hint="@string/nome"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@id/formlogin"
@@ -87,7 +77,7 @@
         android:layout_marginTop="70dp"
         android:autofillHints=""
         android:drawableLeft="@drawable/ic_email"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@id/formlogin"
@@ -101,7 +91,7 @@
         android:layout_marginTop="70dp"
         android:autofillHints=""
         android:drawableLeft="@drawable/number"
-        android:hint="+258 "
+        android:hint="@string/numero"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@id/formlogin"
@@ -114,7 +104,7 @@
         android:layout_marginTop="70dp"
         android:autofillHints=""
         android:drawableLeft="@drawable/ic_eye"
-        android:hint="Senha"
+        android:hint="@string/senha"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@id/formlogin"
@@ -128,7 +118,7 @@
         android:layout_marginTop="70dp"
         android:autofillHints=""
         android:drawableLeft="@drawable/ic_eye"
-        android:hint="Senha"
+        android:hint="@string/repsenha"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@id/formlogin"
@@ -140,49 +130,21 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_entrar"
+        android:id="@+id/btn_registar"
         style="@style/button"
-        android:text="@string/entrar"
+        android:text="@string/registarc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_repsenha"
         android:background="@drawable/background"
         />
 
-    <TextView
-        android:id="@+id/criartext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/criar"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@id/btn_entrar"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="70dp"
-        />
-
-    <TextView
-        android:id="@+id/criartextcriar"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="criar conta"
-        android:clickable="true"
-        android:onClick="criarConta"
-        android:focusable="true"
-        android:textColor="@color/purple_200"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/criartext"
-        app:layout_constraintTop_toTopOf="@id/criartext"
-        tools:ignore="OnClick" />
 
 
+    <!--    Linhas inferiores dos campos EditText-->
     <View
         android:id="@+id/divider"
-        android:layout_width="315dp"
+        android:layout_width="300dp"
         android:layout_height="2dp"
         android:background="@color/black"
         tools:ignore="MissingConstraints,NotSibling"
@@ -192,11 +154,53 @@
         tools:layout_editor_absoluteY="230dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"/>
+        app:layout_constraintTop_toBottomOf="@id/nome"/>
+
 
     <View
-        android:id="@+id/divide2"
-        android:layout_width="315dp"
+        android:id="@+id/divider1"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints,NotSibling"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="-4dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_Email"/>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints,NotSibling"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="-4dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_numero"/>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints,NotSibling"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="-4dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_repsenha"/>
+    <View
+        android:id="@+id/divide5"
+        android:layout_width="300dp"
         android:layout_height="2dp"
         android:background="@color/black"
         tools:ignore="MissingConstraints"

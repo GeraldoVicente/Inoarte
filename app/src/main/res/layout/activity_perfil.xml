@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Perfil">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:id="@+id/linear0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/topview"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="@drawable/topprofile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="-100dp"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/profilepic"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:outlineAmbientShadowColor="@color/black"
+                    android:src="@drawable/pefilpic"
+                    app:layout_constraintBottom_toBottomOf="@+id/topview"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/topview" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="David Jorge"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/profilepic"
+                    app:layout_constraintEnd_toEndOf="@id/profilepic"
+                    app:layout_constraintTop_toBottomOf="@id/profilepic" />
+                <TextView
+                    android:id="@+id/text_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Músico"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@id/text_name"
+                    app:layout_constraintEnd_toEndOf="@id/text_name"
+                    app:layout_constraintTop_toBottomOf="@id/text_name" />
+
+
+                <TextView
+                    android:id="@+id/text_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sofala, Beira"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/ic_location"
+                    app:layout_constraintStart_toStartOf="@id/text_categoria"
+                    app:layout_constraintEnd_toEndOf="@id/text_categoria"
+                    app:layout_constraintTop_toBottomOf="@id/text_categoria"/>
+
+
+
+
+
+                <TextView
+                    android:id="@+id/text_sobremim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Biografia"
+                    android:textStyle="bold"
+                    android:background="@drawable/roudend"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@id/text_local"
+                    app:layout_constraintEnd_toEndOf="@id/text_local"
+                    app:layout_constraintTop_toBottomOf="@id/text_local" />
+
+                <View
+                    android:id="@+id/bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@color/cinza"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:alpha="0.4"
+                    app:layout_constraintStart_toStartOf="@id/text_sobremim"
+                    app:layout_constraintEnd_toEndOf="@id/text_sobremim"
+                    app:layout_constraintTop_toBottomOf="@id/text_sobremim"/>
+                <TextView
+                    android:id="@+id/text_media"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minhas Midias"
+                    android:drawableLeft="@drawable/ic_grid"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintTop_toBottomOf="@id/bio"
+                    />
+                <TextView
+                    android:id="@+id/text_vertudo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver tudo"
+
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/bio"
+                    app:layout_constraintTop_toBottomOf="@id/bio"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="We are a global community of developers committed to keep evolving as students and professionals. Train algorithms and programming challenges"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:justificationMode="inter_word"
+                    app:layout_constraintStart_toStartOf="@id/text_sobremim"
+                    app:layout_constraintEnd_toEndOf="@id/text_sobremim"
+                    app:layout_constraintTop_toBottomOf="@id/text_sobremim"
+                    />
+
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:columnWidth="100dp"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="@id/text_media"
+                    app:layout_constraintEnd_toEndOf="@id/text_media"
+                    app:layout_constraintTop_toBottomOf="@id/text_media"/>
+
+                <Button
+                    android:id="@+id/btnChangeImage"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                   android:text="Editar"
+                    android:alpha="0.8"
+                    android:layout_marginTop="20dp"
+                    android:textSize="9sp"
+                    app:layout_constraintStart_toStartOf="@id/topview"
+                    app:layout_constraintEnd_toEndOf="@id/topview"
+                    app:layout_constraintTop_toBottomOf="@+id/topview" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

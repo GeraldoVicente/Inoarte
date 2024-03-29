@@ -12,6 +12,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     private TextView text_tela_cadastro;
+    private TextView esqueciSenha;
 
 
     @Override
@@ -30,9 +31,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        esqueciSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( MainActivity.this,ResetSenha.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private  void  IniciarComponentes(){
         text_tela_cadastro = findViewById(R.id.text_tela_cadastro);
+        esqueciSenha = findViewById(R.id.esqueciSenha);
     }
 }
